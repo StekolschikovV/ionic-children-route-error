@@ -1,4 +1,4 @@
-import {HomePageModule} from './../home/home.module';
+import {HomePageModule} from './home/home.module';
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
@@ -14,11 +14,11 @@ const routes: Routes = [
                 children: [
                     {
                         path: '',
-                        loadChildren: './../home/home.module#HomePageModule'
+                        loadChildren: './home/home.module#HomePageModule'
                     },
                     {
                         path: 'detail',
-                        loadChildren: './../detail/detail.module#DetailPageModule'
+                        loadChildren: './detail/detail.module#DetailPageModule'
                     }
                 ]
             },
@@ -27,7 +27,7 @@ const routes: Routes = [
                 children: [
                     {
                         path: '',
-                        loadChildren: './../about/about.module#AboutPageModule'
+                        loadChildren: './about/about.module#AboutPageModule'
                     }
                 ]
             },
@@ -36,17 +36,7 @@ const routes: Routes = [
                 children: [
                     {
                         path: '',
-                        loadChildren: './../contact/contact.module#ContactPageModule'
-                    }
-                ]
-            }
-            ,
-            {
-                path: 'test',
-                children: [
-                    {
-                        path: '',
-                        loadChildren: './test/test.module#TestPageModule'
+                        loadChildren: './contact/contact.module#ContactPageModule'
                     }
                 ]
             }
